@@ -14,17 +14,19 @@ var store = fortune({
 }); 
 
 store.defineType('subject', {
-    subject_name:    {type: String},
-    subject_code:    {type: String},
-    subject_size:    {type: Number},
-    subject_location: {type: String},
-    subject_teacher: {type: String}
+    name:       {type: String},
+    code:       {type: String},
+    size:       {type: Number},
+    location:   {type: String},
+    teacher:    {type: String}
 });
 
 store.defineType('user', {
-    user_neptun:    {type: String},
-    user_password:    {type: String},
-    user_role:    {type: String},
+    neptun:     {type: String},
+    password:   {type: String},
+    surname:    {type: String},
+    forename:   {type: String},
+    email:      {type: String},
 });
 
 server.use(function (req, res, next) {
